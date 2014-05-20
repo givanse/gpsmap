@@ -1,0 +1,14 @@
+
+#geolocate_ctrl {
+        border: 1px solid #616161;
+        background-color: #ffffff;
+        border-radius: 4px;
+        margin: 6px;
+        padding: 2px;
+        cursor: pointer;
+}
+
+#geolocate_ctrl img {
+}
+
+/*EOF*/
