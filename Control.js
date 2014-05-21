@@ -11,7 +11,7 @@ createGeolocate: function () {
                      .attr('title', 'Current Location')
                      .appendTo(controlDiv);
 
-    $('<img>').attr('src', 'js/gpsmap/img/geolocate64.png')
+    $('<img>').attr('src', 'js/gpsmap/img/geolocate.svg')
               .appendTo(controlUI$);
 
     return controlDiv;

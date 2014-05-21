@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 64 64" 
+     width="64" height="64"
+     preserveAspectRatio="xMinYMin meet">
+    <path d="M 32,5 L 5,59 Q 32,19 59,59 z"
+          style="stroke: #0000ff; stroke-width: 4; fill-opacity: 0.75; fill: #ff0000"/>
+</svg>

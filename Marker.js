@@ -1,21 +1,29 @@
+'use strict';
 
 GPSMap.Marker = {
 
 createLocationArrow: function (map) {
-    var marker = null;
-    var circle = null;
 
     function update (lat, long, accuracy, heading) {
+        marker.setVisible(false);
+        circle.setVisible(false);
+
         var latlng = new google.maps.LatLng(lat, long);
         marker.setPosition(latlng);
         symbol.rotation = heading;
         marker.setIcon(symbol);
 
-        circle.setVisible(false);
         circle.setCenter(latlng);
         circle.setRadius(accuracy); 
+
+        marker.setVisible(true);
         circle.setVisible(true);
-    }; /* update */
+    }; /* LocationArrow.update */
+
+    function isVisibleOnMap() {
+        var pos = marker.getPosition();
+        return marker.getMap().getBounds().contains( pos );
+    }
 
     var symbol = {
         anchor: new google.maps.Point(32, 0),
@@ -41,9 +49,10 @@ createLocationArrow: function (map) {
         fillOpacity: 0.35,
         map: marker.getMap()
     };
-    circle = new google.maps.Circle(cOptions);
+    var circle = new google.maps.Circle(cOptions);
 
-    var locArrowMrkr = {update: update};
+    var locArrowMrkr = {isVisibleOnMap: isVisibleOnMap,
+                        update: update};
 
     return locArrowMrkr;
 } /* createLocationArrow */

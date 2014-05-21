@@ -1,14 +1,23 @@
 
 #geolocate_ctrl {
-        border: 1px solid #616161;
-        background-color: #ffffff;
-        border-radius: 4px;
-        margin: 6px;
-        padding: 2px;
-        cursor: pointer;
+    border: 1px solid #000000;
+    background-color: rgba(29, 46, 27, 0.5);
+    border-radius: 4px;
+    margin: 6px;
+    padding: 2px;
+    cursor: pointer;
 }
 
 #geolocate_ctrl img {
+    height: 32px;
+    width: 32px;
+}
+
+@media screen and (min-height: 768px) {
+    #geolocate_ctrl img {
+        height: 64px;
+        width: 64px;
+    }   
 }
 
 /*EOF*/
